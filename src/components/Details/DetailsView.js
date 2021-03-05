@@ -1,24 +1,31 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import './Details.css';
 
 const DetailsView = props => {
     return (
-        <div>
-            <ul>
-                <li>{props.details.flight_number}</li>
-                <li>{props.details.mission_name}</li>
-                <li>{props.details.launch_year}</li>
-                <li>{props.details.launch_success? "success" : "fail" }</li>
-            </ul>
+        <div className={props.className}>
+            <div>{props.details.mission_name}</div>
+            <div>{props.details.flight_number}</div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Launch Name </td>
+                        <td>{props.details.launch_year}</td>
+                    </tr>
+                    <tr>
+                        <td>Launch Result </td>
+                        <td>{props.details.launch_success ? "success" : "fail"}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {/* <div>Launch Number: {props.details.flight_number}</div>
+            <div>Mission Name: {props.details.mission_name}</div>
+            <div>Launch Name: {props.details.launch_year}</div>
+            <div>Launch Result: {props.details.launch_success ? "success" : "fail"}</div> */}
         </div>
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        details: state.flight
-    }
-}
 
 
-export default connect(mapStateToProps, null)(DetailsView);
+export default DetailsView;

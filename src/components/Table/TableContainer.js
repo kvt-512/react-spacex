@@ -27,6 +27,8 @@ class TableContainer extends React.PureComponent{
             key={this.key}
             index={this.index}
             flight_number={this.flight}
+            launches={this.props.launches}
+            className={this.props.className}
          ></TableView>   
         );
     }

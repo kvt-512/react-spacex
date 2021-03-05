@@ -2,9 +2,9 @@ import FormContainer from './FormContainer';
 import { showAllLaunches, showPastLaunches, showUpComingLaunches, showLaunch , datedLaunch} from '../../action-creator';
 import { connect } from 'react-redux';
 
-const mapStateToProps = () => {
+const mapStateToProps = state => {
     return {
-
+        className: state.actives.includes("form")? "show" : "hide"
     };
 }
 

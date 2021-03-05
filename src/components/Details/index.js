@@ -2,9 +2,10 @@ import DetailsView from './DetailsView';
 import { connect } from 'react-redux';
 // import { showLaunch } from '../../action-creator';
 
-const mapStateToProps = () => {
+const mapStateToProps = state => {
     return {
-
+        details: state.flight,
+        className: state.actives.includes("details")? "show" : "hide"
     };
 }
 

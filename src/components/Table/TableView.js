@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 const TableView = props => {
     return (
-        <div>
+        <div className={props.className}>
             <table>
                 <tbody>
                     <tr>
@@ -39,10 +38,4 @@ const TableView = props => {
     );
 }
 
-const mapStateToProps = state => {
-    return {
-        launches: state.launches
-    }
-}
-
-export default connect(mapStateToProps, null)(TableView);
+export default TableView;

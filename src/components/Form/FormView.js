@@ -2,7 +2,7 @@ import React from 'react';
 
 const FormView = props => {
     return (
-        <div>
+        <div className={props.className}>
             <div>
                 <button onClick={props.allLaunches}>All launches</button>
                 <button onClick={props.pastLaunches}>Previous launches</button>

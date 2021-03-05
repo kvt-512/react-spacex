@@ -2,9 +2,10 @@ import TableContainer from './TableContainer';
 import { connect } from 'react-redux';
 import { showLaunch } from '../../action-creator';
 
-const mapStateToProps = () => {
+const mapStateToProps = state => {
     return {
-
+        launches: state.launches,
+        className: state.actives.includes("table")? "show" : "hide"
     };
 }
 

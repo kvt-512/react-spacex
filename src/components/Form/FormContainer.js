@@ -71,6 +71,7 @@ class FormContainer extends React.PureComponent {
                 findLaunch={this.findLaunch}
                 onStartDate={this.onStartDate}
                 onEndDate={this.onEndDate}
+                className={this.props.className}
             ></FormView>
         );
     }

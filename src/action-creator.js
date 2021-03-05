@@ -32,3 +32,24 @@ export const datedLaunch = data => {
         launch: data
     }
 }
+
+export const logMeIn = data => {
+    return {
+        type: "login",
+        login: data
+    }
+}
+
+export const logMeOut = data => {
+    return {
+        type: "logout",
+        logout: data
+    }
+}
+
+export const registerMe = data => {
+    return {
+        type: "register",
+        register: data
+    }
+}
