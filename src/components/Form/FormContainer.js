@@ -7,40 +7,31 @@ class FormContainer extends React.PureComponent {
         super(props)
         this.state = {
             startDate: getFormatedDate(),
-            endDate:  getFormatedDate()
+            endDate: getFormatedDate()
         }
 
-        this.allLaunches = () => {
-            fetch('https://api.spacexdata.com/v3/launches')
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    props.showAllLaunches(data);
-                });
+        this.allLaunches = async () => {
+            const responce = await fetch('https://api.spacexdata.com/v3/launches');
+            const data = await responce.json();
+            props.showAllLaunches(data);
         }
 
-        this.pastLaunches = () => {
-            fetch('https://api.spacexdata.com/v3/launches/past')
-                .then(response => response.json())
-                .then(data => {
-                    props.showPastLaunches(data);
-                });
+        this.pastLaunches = async () => {
+            const responce = await fetch('https://api.spacexdata.com/v3/launches/past');
+            const data = await responce.json();
+            props.showPastLaunches(data);
         }
 
-        this.upComingLaunches = () => {
-            fetch('https://api.spacexdata.com/v3/launches/upcoming')
-                .then(response => response.json())
-                .then(data => {
-                    props.showUpComingLaunches(data);
-                });
+        this.upComingLaunches = async () => {
+            const responce = await fetch('https://api.spacexdata.com/v3/launches/upcoming');
+            const data = await responce.json();
+            props.showUpComingLaunches(data);
         }
 
-        this.findLaunch = e => {
-            fetch(`https://api.spacexdata.com/v3/launches?start=${this.state.startDate}&end=${this.state.endDate}`)
-                .then(response => response.json())
-                .then(data => {
-                    props.datedLaunch(data);
-                });
+        this.findLaunch = async e => {
+            const response = await fetch(`https://api.spacexdata.com/v3/launches?start=${this.state.startDate}&end=${this.state.endDate}`);
+            const data = await response.json();
+            props.datedLaunch(data);
         }
     }
 
@@ -48,15 +39,12 @@ class FormContainer extends React.PureComponent {
         this.setState({
             startDate: e.target.value
         })
-        // console.log(this.state.startDate);
     }
 
     onEndDate = e => {
-        console.log(e.target.value);
         this.setState({
             endDate: e.target.value
         })
-        // console.log(this.state.endDate);
     }
 
 
@@ -72,7 +60,7 @@ class FormContainer extends React.PureComponent {
                 onStartDate={this.onStartDate}
                 onEndDate={this.onEndDate}
                 className={this.props.className}
-            ></FormView>
+            />
         );
     }
 }

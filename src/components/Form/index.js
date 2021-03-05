@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        className: state.actives.includes("form")? "show" : "hide"
+        className: state.display.actives.includes("form")? "show" : "hide"
     };
 }
 

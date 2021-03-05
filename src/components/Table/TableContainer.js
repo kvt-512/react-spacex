@@ -9,14 +9,11 @@ class TableContainer extends React.PureComponent{
             index: null
         }
 
-        this.showDetails = e => {
+        this.showDetails = async e => {
             let number = e.target.parentNode.getAttribute("flight");
-            fetch(`https://api.spacexdata.com/v3/launches/${number}`)
-                .then(response => response.json())
-                .then(data => {
-                    props.showLaunch(data);
-                });
-
+            const responce = await fetch(`https://api.spacexdata.com/v3/launches/${number}`);
+            const data = await responce.json();
+            props.showLaunch(data);
         }
     }
     

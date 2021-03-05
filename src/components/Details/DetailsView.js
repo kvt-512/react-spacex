@@ -18,10 +18,6 @@ const DetailsView = props => {
                     </tr>
                 </tbody>
             </table>
-            {/* <div>Launch Number: {props.details.flight_number}</div>
-            <div>Mission Name: {props.details.mission_name}</div>
-            <div>Launch Name: {props.details.launch_year}</div>
-            <div>Launch Result: {props.details.launch_success ? "success" : "fail"}</div> */}
         </div>
     );
 }

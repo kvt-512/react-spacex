@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        user: state.user,
-        className: state.actives.includes("logout")? "show" : "hide"
+        user: state.launches.user,
+        className: state.display.actives.includes("logout")? "show" : "hide"
     };
 }
 
