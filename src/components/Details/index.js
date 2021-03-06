@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
     return {
-        details: state.launches.flight,
+        flight: state.launches.flight,
         className: state.display.actives.includes("details")? "show" : "hide"
     };
 }

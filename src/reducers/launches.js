@@ -1,27 +1,32 @@
 const launches = (state = {
     launches: [],
     flight: {},
-    user: ""
+    user: "",
+    title: ""
   }, action) => {
     switch (action.type) {
       case "all":
         return {...state, 
-          launches: action.allLaunches
+          launches: action.allLaunches,
+          title: "All Launches"
         }
       case "past":
         return {...state,
-          launches: action.pastLaunches
+          launches: action.pastLaunches,
+          title: "Past Launches"
         }
       case "upcoming":
         return {...state,
-          launches: action.upComingLaunches
+          launches: action.upComingLaunches,
+          title: "Upcoming Launches"
         }
       case "search":
         return { ...state, flight: action.searchLaunch
         }
       case "date":
         return {...state,
-          launches: action.launch
+          launches: action.launch,
+          title: `Launches from ${action.startDate} to ${action.endDate}`
         }
       case "login":
         return {...state,

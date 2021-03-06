@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap');
+
+.app {
+    margin-right: 250px;
+    margin-left: 250px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .app {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}

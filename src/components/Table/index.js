@@ -5,7 +5,8 @@ import { showLaunch } from '../../action-creator';
 const mapStateToProps = state => {
     return {
         launches: state.launches.launches,
-        className: state.display.actives.includes("table")? "show" : "hide"
+        className: state.display.actives.includes("table")? "show" : "hide",
+        title: state.launches.title
     };
 }
 

@@ -7,7 +7,7 @@ class FormContainer extends React.PureComponent {
         super(props)
         this.state = {
             startDate: getFormatedDate(),
-            endDate: getFormatedDate()
+            endDate: getFormatedDate(),
         }
 
         this.allLaunches = async () => {
@@ -31,7 +31,7 @@ class FormContainer extends React.PureComponent {
         this.findLaunch = async e => {
             const response = await fetch(`https://api.spacexdata.com/v3/launches?start=${this.state.startDate}&end=${this.state.endDate}`);
             const data = await response.json();
-            props.datedLaunch(data);
+            props.datedLaunch(data, this.state.startDate, this.state.endDate);
         }
     }
 

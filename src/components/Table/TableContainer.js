@@ -26,6 +26,7 @@ class TableContainer extends React.PureComponent{
             flight_number={this.flight}
             launches={this.props.launches}
             className={this.props.className}
+            title={this.props.title}
          ></TableView>   
         );
     }

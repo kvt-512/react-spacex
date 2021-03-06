@@ -8,7 +8,7 @@ class LoginContainer extends React.PureComponent {
     constructor(props) {
         super(props)
         this.state = {
-            user: "",
+            email: "",
             password: "",
             message: ""
         }
@@ -16,7 +16,7 @@ class LoginContainer extends React.PureComponent {
 
         this.onInputEmail = e => {
             this.setState({
-                user: e.target.value
+                email: e.target.value
             })
         }
 
@@ -27,7 +27,7 @@ class LoginContainer extends React.PureComponent {
         }
 
         this.onLogin = async e => {
-            if (this.state.user === null || this.state.user === undefined || this.state.user === "")
+            if (this.state.email === null || this.state.email === undefined || this.state.email === "")
                 this.setState({
                     message: "Invalied mail id"
                 })
@@ -37,11 +37,13 @@ class LoginContainer extends React.PureComponent {
                 })
             else {
                 try {
-                    const userCredential = await firebase.auth().signInWithEmailAndPassword(this.state.user, this.state.password)
+                    const userCredential = await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
                     var user = userCredential.user;
                     props.logMeIn(user.email)
                     this.setState({
-                        message: ""
+                        message: "",
+                        email: "",
+                        password: ""
                     });
                 } catch (error) {
                     let errorMessage = error.message;
@@ -53,7 +55,7 @@ class LoginContainer extends React.PureComponent {
         }
 
         this.onRegister = async e => {
-            if (this.state.user === null || this.state.user === undefined || this.state.user === "")
+            if (this.state.email === null || this.state.email === undefined || this.state.email === "")
                 this.setState({
                     message: "Invalied mail id"
                 })
@@ -63,11 +65,13 @@ class LoginContainer extends React.PureComponent {
                 })
             else {
                 try {
-                    const userCredential = await firebase.auth().createUserWithEmailAndPassword(this.state.user, this.state.password)
+                    const userCredential = await firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
                     var user = userCredential.user;
                     props.registerMe(user.email)
                     this.setState({
-                        message: ""
+                        message: "Registered successfully! Please login",
+                        email: "",
+                        password: ""
                     });
                 } catch (error) {
                     let errorMessage = error.message;
@@ -80,7 +84,7 @@ class LoginContainer extends React.PureComponent {
 
         this.onCancel = e => {
             this.setState({
-                user: "",
+                email: "",
                 password: ""
             })
         }
@@ -94,7 +98,7 @@ class LoginContainer extends React.PureComponent {
                 onLogin={this.onLogin}
                 onRegister={this.onRegister}
                 onCancel={this.onCancel}
-                userValue={this.state.user}
+                emailValue={this.state.email}
                 passwordValue={this.state.password}
                 message={this.state.message}
                 className={this.props.className}

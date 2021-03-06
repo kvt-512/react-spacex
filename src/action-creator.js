@@ -26,10 +26,13 @@ export const showLaunch = data => {
     }
 }
 
-export const datedLaunch = data => {
+export const datedLaunch = (data, startDate, endDate) => {
+    console.log(startDate, endDate);
     return {
         type: "date",
-        launch: data
+        launch: data,
+        startDate: startDate,
+        endDate: endDate
     }
 }
 

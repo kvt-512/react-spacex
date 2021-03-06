@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => {
         showPastLaunches: pastLaunches => dispatch(showPastLaunches(pastLaunches)),
         showUpComingLaunches: upComingLaunches => dispatch(showUpComingLaunches(upComingLaunches)),
         showLaunch: launch => dispatch(showLaunch(launch)),
-        datedLaunch: launchDates => dispatch(datedLaunch(launchDates))
+        datedLaunch: (launchDates, startDate, endDate) => dispatch(datedLaunch(launchDates, startDate, endDate))
     }
 }
 

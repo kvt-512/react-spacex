@@ -3,11 +3,11 @@ import Table from './Table';
 import Details from './Details';
 import Login from './Login';
 import Logout from './Logout';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <h1>SpaceX Dashboard</h1>
+    <div className="app">
       <Login></Login>
       <Logout></Logout>
       <Form></Form>

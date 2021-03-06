@@ -5,3 +5,40 @@
 .show {
     display: block;
 }
+
+.logout {
+    position: absolute;
+    right: 250px;
+    top: 10px;
+}
+
+.logoutMessage {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: grey;
+}
+
+.user {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: grey;
+}
+
+.logoutButton {
+    margin: 5px;
+    background-color: darkgrey;
+    color: white;
+    width: max-content;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px){
+    .logout {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        left: 0px;
+        text-align: center;
+    }
+}
