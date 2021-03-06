@@ -19,22 +19,22 @@ vishnu.koya@gmail.com
 ## Sample screens
 
 Registration/Login screen
-![./login1.jpg](login.jpg)
+![./login1.jpg](login1.jpg)
 
 Launch listing
-![./list1.jpg](list.jpg)
+![./list1.jpg](list1.jpg)
 
 Launch detail
-![./detail1.jpg](detail.jpg)
+![./detail1.jpg](detail1.jpg)
 
 Registration/Login screen
-![./login2.jpg](login.jpg)
+![./login2.jpg](login2.jpg)
 
 Launch listing
-![./list2.jpg](list.jpg)
+![./list2.jpg](list2.jpg)
 
 Launch detail
-![./detail2.jpg](detail.jpg)
+![./detail2.jpg](detail2.jpg)
 
 ## Areas for improvement
 
