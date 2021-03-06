@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/Details/Details.css"],"names":[],"mappings":"AAAA,MACI,YACJ,CAEA,MACI,aACJ","file":"main.c071baa6.chunk.css","sourcesContent":[".hide {\r\n    display: none;\r\n}\r\n\r\n.show {\r\n    display: block;\r\n}"]}

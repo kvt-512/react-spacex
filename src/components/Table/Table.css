@@ -36,7 +36,7 @@ table {
 }
 
 .tableContent:nth-child(odd) {
-    background-color: #f8f8f8;
+    background-color: #00334d;
 }
 
 .tableContent:hover {
@@ -44,6 +44,14 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     background-color: lightgrey;
+    color: black;
+}
+
+.title {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

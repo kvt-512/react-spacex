@@ -9,7 +9,7 @@
 .boxshadow {
     width: 400px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px lightgrey;
+    box-shadow: 0px 0px 10px black;
     padding: 10px;
 }
 
@@ -36,6 +36,13 @@
     width: 130px;
 }
 
+.title {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     .boxshadow {
         width: 300px;
@@ -47,12 +54,5 @@
 
     .cancelButton {
         width: 90px;
-    }
-
-    .title {
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: darkgrey;
-        text-align: center;
     }
 }
