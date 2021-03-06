@@ -1,9 +1,9 @@
-#SpaceX Dashboard
+# SpaceX Dashboard
 Vishnu Teja Koyya
 vishnu.koya@gmail.com
 6 MARCH 2021
 
-##Features
+## Features
 
 1. User registration
 2. User login
@@ -16,7 +16,7 @@ vishnu.koya@gmail.com
 9. Responsive UI
 10. Input Validation
 
-##Sample screens
+## Sample screens
 
 Registration/Login screen
 ![](login.jpg)
@@ -27,12 +27,12 @@ Launch listing
 Launch detail
 ![](detail.jpg)
 
-##Areas for improvement
+## Areas for improvement
 
 1. Infinite scrolling
 2. Validation of dates
 
-##Technology
+## Technology
 
 1. ReactJS
 2. Redux
